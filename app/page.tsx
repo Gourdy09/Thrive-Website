@@ -1,17 +1,21 @@
-"use client";
 import Navbar from "./components/Navbar";
-
+import Hero from "./components/Hero";
+import Stats from "./components/Stats";
+import Partners from "./components/Partners";
+import Features from "./components/Features";
+import Cta from "./components/Cta";
+import Footer from "./components/Footer";
 
 export default function Home() {
-
-
   return (
-    <div className="overflow">
+    <>
       <Navbar />
-      <main className="w-screen h-[80vh]  bg-brand-primary transition-colors duration-300">
-        <h1>Thrive</h1>
-      </main>
-    </div>
-
+      <Hero />
+      <Stats />
+      <Partners />
+      <Features />
+      <Cta />
+      <Footer />
+    </>
   );
 }
