@@ -38,7 +38,7 @@ export const BRAND = {
   ];
   
   // ── Partner Logos (scrolling marquee) ────────────────────────────
-  export const PARTNERS = [
+  export const PARTNERS: { name: string }[] = [
     // Add names later
     // { name: "Junior Achievement", logo: null },
   ];
