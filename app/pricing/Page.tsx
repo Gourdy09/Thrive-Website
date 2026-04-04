@@ -1,7 +1,7 @@
 "use client";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
-import { PRICING } from "../../public/data";
+import { PRICING } from "../../lib/data";
 import { Check, ArrowRight, Zap } from "lucide-react";
 import { useState } from "react";
 import ContactModal from "../../components/ContactModal";

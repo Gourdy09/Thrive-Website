@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
-import { BRAND } from "../../public/data";
+import { BRAND } from "../../lib/data";
 
 export const metadata: Metadata = { title: "Privacy Policy" };
 

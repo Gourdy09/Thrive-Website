@@ -1,4 +1,4 @@
-import { PARTNERS } from "../public/data";
+import { PARTNERS } from "../lib/data";
 
 // Duplicate for seamless loop
 const doubled = [...PARTNERS, ...PARTNERS];

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
-import { INTEGRATIONS } from "../../public/data";
+import { INTEGRATIONS } from "../../lib/data";
 import { Heart, FileText, Utensils, Plug, ArrowRight, Bell } from "lucide-react";
 import Link from "next/link";
 

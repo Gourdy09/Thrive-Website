@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
-import { HOW_IT_WORKS, BRAND } from "../../public/data";
+import { HOW_IT_WORKS, BRAND } from "../../lib/data";
 import { ArrowRight, Activity, ChevronRight } from "lucide-react";
 import Link from "next/link";
 

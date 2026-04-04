@@ -3,7 +3,7 @@ import { useState } from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import ContactModal from "../../components/ContactModal";
-import { BRAND } from "../../public/data";
+import { BRAND } from "../../lib/data";
 import { Mail, MapPin, Clock, ArrowRight, MessageSquare, Users, Zap } from "lucide-react";
 
 export default function ContactPage() {

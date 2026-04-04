@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
-import { NAV_LINKS, BRAND } from "../public/data";
+import { NAV_LINKS, BRAND } from "../lib/data";
 import ContactModal from "./ContactModal";
 
 export default function Navbar() {

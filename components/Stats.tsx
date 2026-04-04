@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { STATS } from "../public/data";
+import { STATS } from "../lib/data";
 
 function useCountUp(target: number, active: boolean) {
   const [count, setCount] = useState(0);

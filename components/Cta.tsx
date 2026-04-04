@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { ArrowRight } from "lucide-react";
-import { BRAND } from "../public/data";
+import { BRAND } from "../lib/data";
 import ContactModal from "./ContactModal";
 
 export default function Cta() {
