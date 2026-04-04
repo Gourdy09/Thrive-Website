@@ -17,7 +17,6 @@ export const BRAND = {
     { label: "How It Works", href: "/how-it-works" },
     { label: "Accuracy", href: "/accuracy" },
     { label: "Pricing", href: "/pricing" },
-    { label: "Team", href: "/team" },
   ];
   
   // ── Hero ─────────────────────────────────────────────────────────

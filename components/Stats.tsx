@@ -5,7 +5,8 @@ import { STATS } from "../public/data";
 function useCountUp(target: number, active: boolean) {
   const [count, setCount] = useState(0);
   useEffect(() => {
-    if (!active || target === 0) { setCount(target); return; }
+    if (!active) return;
+    if (target === 0) { setCount(0); return; }
     let cur = 0;
     const step = target / 60;
     const t = setInterval(() => {
@@ -21,13 +22,27 @@ function useCountUp(target: number, active: boolean) {
 function StatCard({ value, suffix, label }: (typeof STATS)[0]) {
   const ref = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(false);
-  const count = useCountUp(value, active);
 
   useEffect(() => {
-    const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) setActive(true); }, { threshold: 0.5 });
-    if (ref.current) obs.observe(ref.current);
-    return () => obs.disconnect();
+    const el = ref.current;
+    if (!el) return;
+    const timer = setTimeout(() => {
+      const obs = new IntersectionObserver(
+        ([e]) => {
+          if (e.isIntersecting) {
+            setActive(true);
+            obs.disconnect();
+          }
+        },
+        { threshold: 0.3 }
+      );
+      obs.observe(el);
+      return () => obs.disconnect();
+    }, 100);
+    return () => clearTimeout(timer);
   }, []);
+
+  const count = useCountUp(value, active);
 
   return (
     <div

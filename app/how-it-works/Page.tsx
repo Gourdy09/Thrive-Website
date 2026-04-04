@@ -82,9 +82,9 @@ export default function HowItWorksPage() {
           <div className="max-w-5xl mx-auto">
             <div className="grid md:grid-cols-3 gap-6">
               {[
-                { label: "Sensor Technology", value: "Photoplethysmography + ML", desc: "Multi-wavelength light sensors read through the skin, combined with our trained model." },
-                { label: "Battery Life", value: "14 Days", desc: "One sensor lasts two full weeks. Swap it out in seconds with zero setup." },
-                { label: "Data Security", value: "HIPAA Compliant", desc: "All data encrypted in transit and at rest. Your health data is yours alone." },
+                { label: "Sensor Technology", value: "PPG + ML", desc: "Multi-wavelength light sensors read through the skin, combined with our trained model." },
+                { label: "Battery Life", value: "14 Days", desc: "One charge lasts two full weeks. Recharge in <1 hour." },
+                { label: "Data Security", value: "HIPAA Compliant", desc: "All data encrypted in transit and at rest or never leaves your phone. Your health data is yours alone." },
               ].map((item) => (
                 <div key={item.label} className="p-6 rounded-3xl border border-white/8 bg-white/[0.02]">
                   <p className="text-white/30 text-xs tracking-widest uppercase mb-2">{item.label}</p>

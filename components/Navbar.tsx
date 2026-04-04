@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { NAV_LINKS, BRAND } from "../public/data";
 import ContactModal from "./ContactModal";
@@ -29,9 +30,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-7 h-7 rounded-lg bg-[#f5c800] flex items-center justify-center">
-              <span className="text-black font-black text-sm">T</span>
-            </div>
+            <Image src="/logo.png" height={32} width={32} alt="logo"/>
             <span className="text-white font-black text-sm tracking-tight">
               {BRAND.name}
             </span>

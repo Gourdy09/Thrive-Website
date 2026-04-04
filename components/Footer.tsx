@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { BRAND } from "../public/data";
+import Image from "next/image";
 
 const cols = [
   {
@@ -15,8 +16,6 @@ const cols = [
     heading: "Company",
     links: [
       { label: "Team", href: "/team" },
-      { label: "Blog", href: "/blog" },
-      { label: "Press", href: "/press" },
       { label: "Contact", href: "/contact" },
     ],
   },
@@ -25,7 +24,6 @@ const cols = [
     links: [
       { label: "Privacy Policy", href: "/privacy" },
       { label: "Terms of Service", href: "/terms" },
-      { label: "HIPAA Compliance", href: "/hipaa" },
     ],
   },
 ];
@@ -37,9 +35,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           <div>
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-7 h-7 rounded-lg bg-[#f5c800] flex items-center justify-center">
-                <span className="text-black font-black text-sm">T</span>
-              </div>
+              <Image src="/logo.png" height={32} width={32} alt="logo"/>
               <span className="text-white font-black">{BRAND.name}</span>
             </Link>
             <p className="text-white/30 text-xs leading-relaxed max-w-[180px] mb-4">

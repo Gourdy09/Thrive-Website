@@ -11,6 +11,8 @@ import {
   Loader2,
 } from "lucide-react";
 
+import emailjs from "@emailjs/browser";
+
 interface ContactModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -79,10 +81,24 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
     }
     setErrors({});
     setLoading(true);
-    // Simulate sending
-    await new Promise((r) => setTimeout(r, 1600));
-    setLoading(false);
-    setSent(true);
+    try {
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        {
+          from_name: form.name,
+          from_email: form.email,
+          subject: form.subject,
+          message: form.message,
+        },
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+      );
+      setSent(true);
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleClose = () => {
@@ -110,14 +126,6 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
           <div className="absolute inset-0 bg-gradient-to-br from-[#f5c800]/5 to-transparent pointer-events-none" />
           <div className="flex items-start justify-between">
             <div>
-              <div className="flex items-center gap-2 mb-1">
-                <div className="w-6 h-6 rounded-lg bg-[#f5c800] flex items-center justify-center">
-                  <span className="text-black font-black text-xs">T</span>
-                </div>
-                <span className="text-white/40 text-xs font-semibold tracking-widest uppercase">
-                  Thrive
-                </span>
-              </div>
               <h2 className="text-2xl font-black text-white">Get in Touch</h2>
               <p className="text-white/40 text-sm mt-1">
                 We&apos;ll get back to you within 24 hours.
