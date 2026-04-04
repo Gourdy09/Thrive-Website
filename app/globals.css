@@ -14,8 +14,6 @@
   --font-sans: 'Sora', sans-serif;
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
-
 html {
   font-family: 'Sora', sans-serif;
   scroll-behavior: smooth;
