@@ -2,7 +2,7 @@
 import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { ArrowRight, Zap } from "lucide-react";
-import { HERO } from "../../lib/data";
+import { HERO } from "../public/data";
 
 export default function Hero() {
   const glowRef = useRef<HTMLDivElement>(null);

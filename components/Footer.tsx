@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BRAND } from "../../lib/data";
+import { BRAND } from "../public/data";
 
 const cols = [
   {

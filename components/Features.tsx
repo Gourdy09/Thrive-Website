@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Activity, Brain, Bell, Utensils, ArrowRight } from "lucide-react";
-import { FEATURES } from "../../lib/data";
+import { FEATURES } from "../public/data";
 
 const ICON_MAP: Record<string, React.ReactNode> = {
   Activity: <Activity size={22} className="text-[#f5c800]" />,
